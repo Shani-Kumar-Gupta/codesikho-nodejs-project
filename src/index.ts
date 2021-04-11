@@ -1,12 +1,20 @@
 // Creating Server
 // Restart Server: rs
 import * as express from 'express';
+import * as mongoose from 'mongoose';
 
 let app: express.Application = express();
 const port = 5000;
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
+})
+
+// Connecting to mongodb
+mongoose.connect('mongodb+srv://mongodbUser:mongouser@mongodb.uujnj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
+    console.log("Mongodb is connected/");
+}).catch(() => {
+    console.log("Mongodb not able to connect");
 })
 
 // Basic of Middleware
