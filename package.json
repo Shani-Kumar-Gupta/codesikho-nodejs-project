@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-project",
+  "version": "1.0.0",
+  "description": "NodeJS Project",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "nodemon --exec ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJS",
+    "Express",
+    "MOngoDB"
+  ],
+  "author": "Shani Kumar Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.37",
+    "@types/nodemon": "^1.19.0",
+    "express": "^4.17.1",
+    "node": "^15.12.0",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
