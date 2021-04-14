@@ -14,6 +14,7 @@ export class Server {
 
     setConfigurations(){
         this.setMongodb();
+        this.configureParser();
     }
 
     setMongodb(){
@@ -23,6 +24,11 @@ export class Server {
         }).catch(() => {
             console.log("*/ Mongodb not connected /*");
         })
+    }
+
+    configureParser(){
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({extended: true}));
     }
 
     setRoutes(){
